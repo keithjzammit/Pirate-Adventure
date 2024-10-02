@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Pirate's Adventure v0.1</title>
+      <script src="scripts.js"></script>
+      <script src="game.js"></script>
+   </head>
+   <body>
+      <div class="game-container">
+         <div class="top-menu">
+             <div class="points-menu">
+                <div id="balance">Balance: €1000</div>
+                <div id="points"></div>
+             </div>
+             <div id="status">Choose your starting points and bombs:</div>
+<div class="options-menu">
+                
+                <div>
+                   <label for="start-points">Starting Bet:</label>
+                   <input type="number" id="start-points" min="1" max="1000" value="10" oninput="validateInput(this)">
+                </div>
+                <div><label for="bombs">Bombs:</label>
+                <input type="number" id="bombs" min="1" max="24" value="10" oninput="validateInput(this)">
+</div>
+    
+             </div>
+             
+            <div id="potential-points" style="display: none;"></div>
+         </div>
+         <div id="game-board"></div>
+         <div class="bottom-menu">
+            <button onclick="startGame()" style="display: inline-block;">Start Game</button>
+            <button onclick=" simulateGames()" id="sim-btn" style="display: inline-block;">Start Simulations</button>
+            <button onclick="buyHint()" id="hint-btn" style="display: none;">Buy Hint</button>
+            <button onclick="stopGame()" id="stop-btn" style="display: none;">Stop and Collect Points</button>
+            <button onclick="resetGame()" id="reset-btn" style="display: none;">Reset Game</button>
+         </div>
+      </div>
+      <div id="message-popup" class="hidden">
+         <p id="message-text">No valid cells left to hint!</p>
+      </div>
+   <div id="simulation-summary"></div>
+</body></html>
