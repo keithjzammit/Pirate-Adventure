@@ -749,4 +749,5 @@ Adjust the Hint Cost of the main gameplay loop
 Try to stabilize the RTP across different bomb counts
 IMPORTANT - When playing risk averse RTP is always Positive - Make Desicion Function
 Right now only works with 24 bombs (since no hints can be chosen duhhh!)
+Trying a test to see if github works
 */
